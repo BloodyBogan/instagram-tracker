@@ -1,10 +1,9 @@
+/* Font Import
+========================= */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&family=Source+Sans+Pro:wght@900&display=swap');
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
+/* Global Variables
+========================= */
 :root {
   --clr-box: #e7e9ed;
   --clr-box-dark: #cfd1d5;
@@ -12,6 +11,14 @@
   --clr-accent: #792359;
   --clr-accent50: #7b245b80;
   --transition: all 150ms ease-in;
+}
+
+/* Basic Resets & Styling
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 h1,
@@ -56,47 +63,8 @@ body {
   overflow-x: hidden;
 }
 
-.background-box {
-  position: absolute;
-  width: 100vw;
-  height: 380px;
-  top: 0;
-  background-color: var(--clr-box);
-  z-index: -10;
-}
-
-.background-box__text {
-  position: absolute;
-  font-size: 10rem;
-  color: var(--clr-box-dark);
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.main {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 2em 1.5em;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  background-color: var(--clr-main);
-  transform-origin: center;
-  overflow: hidden;
-  animation: rotateFadeIn 500ms cubic-bezier(0.68, -0.6, 0.32, 1.6) forwards;
-}
-
-.hero__title {
-  font-size: 2.5rem;
-  letter-spacing: 1px;
-  line-height: 1;
-  color: var(--clr-accent);
-  opacity: 0.9;
-}
-
-.hero__text {
-  font-size: 1rem;
-  margin: 2em 0 2.5em 0;
-}
-
+/* Buttons
+========================= */
 .btn {
   display: inline-block;
   padding: 0.7em 3em;
@@ -126,6 +94,65 @@ body {
   color: var(--color);
 }
 
+.btn-search {
+  background-color: var(--clr-accent);
+  border-color: var(--clr-accent);
+}
+
+.btn-search:hover,
+.btn-search:focus {
+  color: var(--clr-accent);
+}
+
+/* Grey Background Box
+========================= */
+.background-box {
+  position: absolute;
+  width: 100vw;
+  height: 380px;
+  top: 0;
+  background-color: var(--clr-box);
+  z-index: -10;
+}
+
+.background-box__text {
+  position: absolute;
+  font-size: 10rem;
+  color: var(--clr-box-dark);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Main Container
+========================= */
+.main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2em 1.5em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background-color: var(--clr-main);
+  transform-origin: center;
+  overflow: hidden;
+  animation: rotateFadeIn 500ms cubic-bezier(0.68, -0.6, 0.32, 1.6) forwards;
+}
+
+/* Hero Section
+========================= */
+.hero__title {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  line-height: 1;
+  color: var(--clr-accent);
+  opacity: 0.9;
+}
+
+.hero__text {
+  font-size: 1rem;
+  margin: 2em 0 2.5em 0;
+}
+
+/* Search Section
+========================= */
 .search__input {
   display: block;
   width: 80%;
@@ -141,22 +168,16 @@ body {
   border-bottom: 1px solid var(--clr-accent50);
 }
 
-.btn-search {
-  background-color: var(--clr-accent);
-  border-color: var(--clr-accent);
-}
-
-.btn-search:hover,
-.btn-search:focus {
-  color: var(--clr-accent);
-}
-
+/* Footer
+========================= */
 .footer p {
   font-size: 1rem;
   font-weight: 300;
   opacity: 0.85;
 }
 
+/* Animations
+========================= */
 @keyframes rotateFadeIn {
   0% {
     transform: rotate(30deg);
